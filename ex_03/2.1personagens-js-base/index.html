@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Exercícios</title>
+    <meta charset = "UTF-8">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        let personagens = [{
+            nome: "Capitão Cometa",
+            dataAparicao: 1951,
+            editora: "DC"
+        }, {
+            nome: "Lanterna Verde",
+            dataAparicao: 1940,
+            editora: "DC"
+        }, {
+            nome: "Ciborgue",
+            dataAparicao: 1980,
+            editora: "DC"
+        }, {
+            nome: "Homem Aranha",
+            dataAparicao: 1962,
+            editora: "Marvel"
+        }, {
+            nome: "Homem de Ferro",
+            dataAparicao: 1963,
+            editora: "Marvel"
+        }, {
+            nome: "Capitão América",
+            dataAparicao: 1940,
+            editora: "Marvel"
+        }];
+
+        // 1.	Liste somente os personagens cuja editora seja Marvel;
+        let personagensMarvel = personagens.filter(element => {
+            return element.editora === "Marvel";
+        })
+        console.log(personagensMarvel);
+
+        //2.	Liste somente os personagem cuja data de Aparição seja superior a 1950;
+        console.log(personagens.filter(element =>{
+            return element.dataAparicao > 1950;
+        }));
+
+        // 3.	Traga somente os nomes dos personagens;
+        let nomes_arr = personagens.map( element => {
+            return element.nome;
+        });
+        console.log(nomes_arr);
+
+        // 4.	Adicione mais um personagem chamado Capitã Marvel, data de Aparição 1977 e editora Marvel;
+        personagens.push({
+            nome : 'Capitã Marvel',
+            dataAparicao : Number(1977),
+            editora : 'Marvel'
+        });
+
+        // 5.	Mostre a quantidade de personagens da Marvel que possuem na lista
+        console.log(personagensMarvel.length);
+        
+        // 6.	Some a idade de todos os personagens;
+        let curr_date = new Date();
+        let idades_arr = [];
+        personagens.forEach(element => {
+            idades_arr.push(Number(curr_date.getFullYear()) - Number(element.dataAparicao));
+        });
+        
+        console.log(idades_arr.reduce((accumulator , element) => {
+            return Number(accumulator) + Number(element);
+        }));
+
+        // 7.	Mostre o nome do personagem e a sua idade(data de nascimento é a data de aparição)
+        console.log(nomes_arr, idades_arr);
+    </script>
+
+</body>
+
+</html>
