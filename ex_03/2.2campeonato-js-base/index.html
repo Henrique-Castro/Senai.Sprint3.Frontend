@@ -89,7 +89,12 @@
         console.log(random_time.nome , Number(random_time.vitorias) + Number(random_time.empates) + Number(random_time.derrotas) , random_time.golsproprio + random_time.golscontra , Number(random_time.golscontra) + Number(random_time.golsproprio));
         
         // 5	Informe a quantidade de jogos do campeonato;
-        // TODO: let jogos_arr = 
+        let jogos_arr = times.map(x => {
+            return Number(x.derrotas) + Number(x.empates) + Number(x.vitorias);
+        });
+        console.log(jogos_arr.reduce((acumulador , element) =>{
+            return Number(acumulador) + Number(element);
+        }));
     </script>
 
 </body>
