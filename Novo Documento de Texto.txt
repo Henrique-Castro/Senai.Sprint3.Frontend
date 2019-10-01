@@ -1,0 +1,29 @@
+search => http-server
+
+cmd =>  npm install http-server -g
+
+cmd =>	C:\Users\46885473820\AppData\Roaming\npm
+{
+	https://www.npmjs.com/package/http-server
+}
+
+search => cdn react
+
+search => babel standalone import link
+
+search => react create app
+
+cmd =>	C:\Users\46885473820\AppData\Roaming\npm
+{
+	npm install create-react-app
+	create-react-app gufos-react {path}
+}
+
+cmd => {path do projeto}
+{
+	npm install
+	npm install axios
+	npm start
+}
+
+

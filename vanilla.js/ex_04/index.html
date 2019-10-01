@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/table-style.css" type="text/css" rel="stylesheet"/>
+    <title>PokeAPI</title>
+</head>
+<body>
+    <header>
+        <nav class="flex-container">
+            <div>
+                <!--TODO: COLOCAR O LOGO DA API AQUI POR JAVASCRIPT<img id="logo-pokeApi"></img>-->
+            </div>
+            <div>
+                <input id="search-input" type="text"/>
+            </div>
+            <div>
+                <input id="search-button" type="submit" value="Procurar"/>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="table-section" class="flex-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº Pokedex</th><!--  TODO: SE FOR POSSÍVEL, MOSTRAR QUAL O ÍNDICE DO BICHO NA POKEDEX -->
+                        <th>Pokemon<!--TODO: COLOCAR AQUI IMAGEM DO BICHO COM SEU NOME ACIMA--></th>
+                        <th class="regular-td">Habilidades<!--TODO: AQUI VAI A LISTA DE HABILIDADES SEPARADAS POR ';' OU '-' --></th>
+                        <th class="regular-td">Dimensões<!--TODO: E AQUI AS DIMENSÕES(TAMANHO E LARGURA DO BICHO, TALVEZ O PESO DELE TAMBÉM)--></th>
+                    </tr>
+                </thead>
+                <tbody id="pokemon-table-body">
+                    <!-- <tr>
+                        <td class="poke-image">
+                            <p>Squirtle</p>
+                            <img src="https://http2.mlstatic.com/colar-pingente-pokemon-squirtle-zenigame-cor-ouro-velho-D_NQ_NP_768006-MLB28579071886_112018-F.jpg"/>
+                        </td>
+                        <td class="poke-abilities regular-td">
+                            <p>Aqua Pulse;Trackle;</p>
+                        </td>
+                        <td class="poke-size regular-td">
+                            <p>0.5 m </p>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/pokemon.js"></script>
+</body>
+</html>
